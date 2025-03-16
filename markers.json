@@ -1,0 +1,38 @@
+{
+  "important_phrases": [
+    "parametric excitation",
+    "swing",
+    "focault pendulum",
+    "gyroscope",
+    "kamerlingh onnes",
+    "ring laser gyro",
+    "hrg",
+    "cassini",
+    "saturn",
+    "unbalance"
+  ],
+  "topic_indicators": [
+    "let's talk about",
+    "moving on to",
+    "next topic",
+    "turning to",
+    "discussing",
+    "let's explore",
+    "speaking of",
+    "regarding",
+    "on the subject of",
+    "now for"
+  ],
+  "conclusion_markers": [
+    "in conclusion",
+    "to summarize",
+    "wrapping up",
+    "in summary",
+    "finally",
+    "to conclude",
+    "key takeaways",
+    "remember",
+    "bottom line",
+    "ultimately"
+  ]
+}

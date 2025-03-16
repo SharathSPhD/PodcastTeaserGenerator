@@ -1,0 +1,38 @@
+{
+  "teaser_duration": 60,
+  "segment_min_duration": 5,
+  "segment_max_duration": 20,
+  "num_segments": 5,
+  "crossfade_duration": 500,
+  "energy_weight": 0.4,
+  "spectral_weight": 0.3,
+  "tempo_weight": 0.3,
+  "silence_threshold": -40,
+  "output_format": "mp3",
+  "normalize_audio": true,
+  "exclude_intro_outro": true,
+  "intro_duration": 30,
+  "outro_duration": 30,
+  "create_summary_teaser": true,
+  "summary_segments_per_track": 2,
+  "summary_teaser_duration": 120,
+  "visualize": false,
+  "transcription": {
+    "enable": true,
+    "model": "base",
+    "language": "en",
+    "cache_dir": "transcripts",
+    "reuse_existing": true,
+    "force_new": false,
+    "save_transcript": true
+  },
+  "analysis_weights": {
+    "transcript_importance": 0.8,
+    "audio_dynamics": 0.2,
+    "transcript_features": {
+      "important_phrases": 0.6,
+      "topic_indicators": 0.2,
+      "conclusion_markers": 0.2
+    }
+  }
+}
