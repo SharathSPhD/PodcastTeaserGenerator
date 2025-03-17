@@ -15,11 +15,44 @@ This guide explains how to use the Podcast Teaser Generator to automatically cre
 
 ## Installation
 
-1. Clone or download the repository
-2. Install dependencies:
+### From PyPI (Recommended)
+
+The easiest way to install Podcast Teaser Generator is through PyPI:
+
 ```
-pip install -r requirements.txt
+pip install podcast-teaser
 ```
+
+You can also specify a version:
+
+```
+pip install podcast-teaser==0.1.0
+```
+
+### From Source
+
+If you prefer to install from source:
+
+1. Clone this repository:
+```
+git clone https://github.com/SharathSPhD/PodcastTeaserGenerator.git
+cd podcast_teaser
+```
+
+2. Install the package:
+```
+pip install -e .
+```
+
+### Testing Your Installation
+
+You can verify that your installation is working correctly by running:
+
+```
+python test_installation.py
+```
+
+This script will check that all dependencies are properly installed and that the package is functioning correctly.
 
 ## Basic Usage
 
@@ -76,6 +109,35 @@ python podcast_teaser.py [input] [options]
 ## Configuration Parameters
 
 The behavior of the teaser generator can be customized by editing the `config.json` file or providing your own configuration file with the `--config` option.
+
+Below is a sample `config.json` file with all available parameters:
+
+```json
+{
+  "teaser_duration": 60,
+  "segment_min_duration": 3,
+  "segment_max_duration": 15,
+  "num_segments": 5,
+  "crossfade_duration": 500,
+  "output_format": "mp3",
+  "normalize_audio": true,
+
+  "energy_weight": 0.4,
+  "spectral_weight": 0.3,
+  "tempo_weight": 0.2,
+  "silence_threshold": -40,
+
+  "exclude_intro_outro": true,
+  "intro_duration": 30,
+  "outro_duration": 30,
+
+  "create_summary_teaser": true,
+  "summary_segments_per_track": 2,
+  "summary_teaser_duration": 120,
+
+  "visualize": false
+}
+```
 
 ### Basic Teaser Settings
 

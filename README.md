@@ -23,18 +23,31 @@ This tool analyzes your podcast audio tracks and automatically extracts the most
 
 ## Installation
 
+### From PyPI (Recommended)
+
+The easiest way to install Podcast Teaser Generator is through PyPI:
+
+```
+pip install podcast-teaser
+```
+
+You can also specify a version:
+
+```
+pip install podcast-teaser==0.1.0
+```
+
+### From Source
+
+If you prefer to install from source:
+
 1. Clone this repository:
 ```
-git clone https://github.com/yourusername/podcast_teaser.git
+git clone https://github.com/SharathSPhD/PodcastTeaserGenerator.git
 cd podcast_teaser
 ```
 
-2. Install dependencies:
-```
-pip install -r requirements.txt
-```
-
-3. Or install the package:
+2. Install the package:
 ```
 pip install -e .
 ```
@@ -68,32 +81,28 @@ Customize the teaser generation by editing `config.json` or providing your own c
 #### Basic Teaser Settings
 ```json
 {
-  "teaser_duration": 60,            // Target duration in seconds for individual teasers
-  "segment_min_duration": 3,        // Minimum duration for each extracted segment in seconds
-  "segment_max_duration": 15,       // Maximum duration for each extracted segment in seconds
-  "num_segments": 5,                // Target number of segments to extract for each teaser
-  "crossfade_duration": 500,        // Duration of crossfade between segments in milliseconds
-  "output_format": "mp3",           // Audio format for output files (mp3, wav, etc.)
-  "normalize_audio": true,          // Whether to normalize audio levels in final teaser
+  "teaser_duration": 60,
+  "segment_min_duration": 3,
+  "segment_max_duration": 15,
+  "num_segments": 5,
+  "crossfade_duration": 500,
+  "output_format": "mp3",
+  "normalize_audio": true,
 
-  // Analysis weights - controls how segments are selected
-  "energy_weight": 0.4,             // Weight for energy-based detection (louder/excited moments)
-  "spectral_weight": 0.3,           // Weight for spectral contrast (tonal variation)
-  "tempo_weight": 0.2,              // Weight for speech tempo variations
-  "silence_threshold": -40,         // dB threshold for silence detection
+  "energy_weight": 0.4,
+  "spectral_weight": 0.3,
+  "tempo_weight": 0.2,
+  "silence_threshold": -40,
 
-  // Intro/Outro Handling
-  "exclude_intro_outro": true,      // Whether to exclude podcast intro/outro music
-  "intro_duration": 30,             // Estimated duration of intro in seconds
-  "outro_duration": 30,             // Estimated duration of outro in seconds
+  "exclude_intro_outro": true,
+  "intro_duration": 30,
+  "outro_duration": 30,
 
-  // Summary Teaser Settings
-  "create_summary_teaser": true,    // Whether to create a summary teaser when processing multiple files
-  "summary_segments_per_track": 2,  // Number of segments to include per track in summary
-  "summary_teaser_duration": 120,   // Target duration for summary teaser in seconds
+  "create_summary_teaser": true,
+  "summary_segments_per_track": 2,
+  "summary_teaser_duration": 120,
 
-  // Visualization
-  "visualize": false                // Whether to generate visualization of audio analysis
+  "visualize": false
 }
 ```
 
